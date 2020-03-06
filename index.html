@@ -26,38 +26,8 @@ function checkTime(i) {
     content: "";
     clear: both;
     display: table;
-    
-    
-
-#random{
-  /* BOX MODEL */
-  width: 100%;
-  height: 450px;
-  border: 1px solid black;
-  
-  /* ENHANCEMENT */
-  background-image: url(https://twinfinite.net/wp-content/uploads/2019/10/destiny-2-shadowkeep-5-1.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;  
-}
+.background {
+	background-image: url(https://wallpaperplay.com/walls/full/7/e/3/59838.jpg);
 </style>
-
-<body onload="randombg()">
-	<div id="random" ></div>  
-</body>
-
-<div class="lbutton" align="left"><button onclick="window.location.reload();">DO NOT PRESS THIS BUTTON </button></div>
-
-<script>
-
-function randombg(){
-  var random= Math.floor(Math.random() * 6) + 0;
-  var bigSize = ["url('https://twinfinite.net/wp-content/uploads/2019/10/destiny-2-shadowkeep-5-1.jpg')",
-                 "url('https://wallpaperplay.com/walls/full/7/e/3/59838.jpg')",
-                 "url('https://images3.alphacoders.com/854/854672.jpg')"];
-  document.getElementById("random").style.backgroundImage=bigSize[random];
-}
-</script>
 
 </html> 
