@@ -1,2 +1,5 @@
 #!/bin/bash
-git pull
+cd awshtml;
+cd awshtml;
+git pull;
+
