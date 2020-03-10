@@ -1,8 +1,41 @@
 <html><head><title> MagickalWiz AWS</title>
 
 <html>
-	<div class = "transparent">
+	<div class = "transparent"> 
+</body>
+<font color="#800000"><b>
+<head>
+<script> 
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};
+  return i;
+}
+</script>
+</head>
 
+
+<body onload="startTime()">
+
+<div id="txt"></div>
+
+</body>
+</b>
+</font>
+</html>
+
+	
+<html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -81,40 +114,10 @@ function closeNav() {
   document.body.style.backgroundColor = "white";
 }
 </script>
-   
-</body>
-<font color="#800000"><b>
-<head>
-<script> 
-function startTime() {
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  var s = today.getSeconds();
-  m = checkTime(m);
-  s = checkTime(s);
-  document.getElementById('txt').innerHTML =
-  h + ":" + m + ":" + s;
-  var t = setTimeout(startTime, 500);
-}
-function checkTime(i) {
-  if (i < 10) {i = "0" + i};
-  return i;
-}
-</script>
-</head>
-
-
-<body onload="startTime()">
-
-<div id="txt"></div>
-
-</body>
-</b>
-</font>
 </html>
 
-
+	
+	
 <style>
 html{
   font-size:16px;
