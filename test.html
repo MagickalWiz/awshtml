@@ -3,8 +3,91 @@
 body{
   background-image: url(https://wallpaperplay.com/walls/full/7/e/3/59838.jpg);
 }
-</style>
 
+body {
+  font-family: system-ui, sans-serif;
+}
+
+.sidenav {
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 1px;
+  right: 0px;
+  background: #eee;
+  overflow-x: hidden;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000000;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #000000;
+}
+
+.main {
+  margin-right: 140px; /* Same width as the sidebar + right position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 0px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 0px;}
+  .sidenav a {font-size: 0px;}
+}
+
+body {
+  font-family: sans-serif;
+  transition: background-color .5s;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-right: 50px;
+  color: black;
+}
+
+#main {
+  transition: margin-right .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
 
 <img src="moon.png" width="133" height="129" alt="Planets" usemap="#planetmap" hspace="1395" vspace="45">
 
@@ -13,3 +96,28 @@ body{
 </map>
 
 </body>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="http://10.183.2.2/tcpdata" target = "_blank"> TCPData </a>
+  <a href="http://10.183.5.44" target = "_blank"> WizHome </a>
+  <a href="http://10.183.5.44/magickalwiz/1k.html" target = "_blank"> 1000 </a>
+</div>
+
+<div id="main">
+  <span style="font-size:30px;color:#800000;cursor:pointer" onclick="openNav()">&#9776; open</span>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginRight = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginRight= "0";
+  document.body.style.backgroundColor = "white";
+}
+</script>
+</html>
